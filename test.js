@@ -11,19 +11,12 @@ const startScanner = () => {
             type: "LiveStream",
             target: document.querySelector('#photo-area'),
             constraints: {
-                decodeBarCodeRate: 3,
-                successTimeout: 500,
-                codeRepetition: true,
-                tryVertical: true,
-                frameRate: 15,
-                width: 640,
-                height: 480,
                 facingMode: "environment"
             },
         },
         decoder: {
             readers: [
-                "i2of5_reader"
+                "ean_reader", "ean_8_reader"
             ]
         },
 
